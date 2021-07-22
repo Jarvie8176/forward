@@ -1,1 +1,16 @@
-foo
+<!-- https://stackoverflow.com/questions/59857991/how-to-301-redirect-a-static-url-to-another-static-url -->
+
+<html>
+  <head>
+    <!--Tells search engines to not index this page-->
+    <meta name="robots" content="noindex">
+    <!--Redirect to new resource-->
+    <meta http-equiv="Refresh" content="0; url=http://www.gov.cn">
+  </head>
+  <body>
+    <!--In case both JavaScript and the meta tag fail-->
+    <script>
+       window.location = 'http://www.gov.cn';
+    </script>
+  </body>
+</html>
